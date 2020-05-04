@@ -7,22 +7,27 @@ body{
 h1{
   color: #FEF2BF;
   font-family: 'Press Start 2P', cursive;
+  margin: 15px 15px 45px;
+
 }
 
 .container{
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 
 .row{
   display: flex;
+  justify-content: center;
 }
 
 .box{
-  width: 100px;
-  height: 100px;
-  border: 2px solid wheat;
+  width: 120px;
+  height: 120px;
+  /* border: 2px solid wheat; */
+  border-radius: 20%;
+  margin: 15px;
 }
 
 .green{
