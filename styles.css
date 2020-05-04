@@ -2,19 +2,31 @@
 
 body{
   background-color: #011F3F;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: relative;
 }
 
 h1{
   color: #FEF2BF;
   font-family: 'Press Start 2P', cursive;
-  margin: 15px 15px 45px;
+  margin: 15px;
+  /* padding-bottom: 30px; */
+  text-align: center;
+}
 
+a{
+  color: #FEF2BF;
+  text-decoration: none;
 }
 
 .container{
   margin: 0 auto;
   width: 100%;
   text-align: center;
+
+  position: absolute;
+  top: 30%;
 }
 
 .row{
@@ -45,3 +57,15 @@ h1{
 .blue{
   background-color: blue;
 }
+
+.off{
+  filter: grayscale(60%);
+}
+
+.pressed{
+  /* border: 5px solid #FEF2BF; */
+  /* box-shadow: inset 0px 0px 0px 5px #FEF2BF; */
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
