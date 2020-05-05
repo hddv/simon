@@ -33,13 +33,28 @@ $("h1").on("click", function(){
 //// NOW
 //select the target node
 let target = $("h1")[0]; //or document.querySelect("h1")
+
+
 //create an observer instance
 let observer = new MutationObserver(function(mutation){
   console.log("h1 changed");
 
   //activate the sound button
   buttonSound();
+
+    //random sound
+    setTimeout(()=>{
+      console.log(playRandomSound());
+    }, 200);
+    
+
+
+  
+
+
 });
+
+
 //configuration of the observer
 let config = {
   attributes: true,
@@ -57,7 +72,7 @@ function buttonSound(){
   
   $(".box").on("click", function(event){
     const colorButton = event.target.classList[1];
-    console.log(colorButton);
+    // console.log(colorButton);
     
     //play audio
     const soundPath = setting[colorButton];
@@ -75,4 +90,18 @@ function activeButtonEffect(element){
   setTimeout(()=>{
     element.classList.remove("pressed");
   }, 100);
+}
+
+
+function playRandomSound(){
+  const number = Math.floor(Math.random()*4)+1;
+  const color = Object.keys(setting)[number];
+  (new Audio(setting[color])).play();
+
+  $(".box."+color).addClass("pressed");
+  setTimeout(()=>{
+    $(".box."+color).removeClass("pressed");
+  }, 100);
+
+  return color;
 }
