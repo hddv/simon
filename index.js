@@ -37,15 +37,20 @@ let target = $("h1")[0]; //or document.querySelect("h1")
 
 //create an observer instance
 let observer = new MutationObserver(function(mutation){
-  console.log("h1 changed");
+  //console.log("h1 changed");
+
+    const model = [];
+    const answer = [];
+
+    //play random sound
+    setTimeout(()=>{
+      model.push(playRandomSound());
+    }, 200);
 
   //activate the sound button
-  buttonSound();
+  buttonSound(model);
 
-    //random sound
-    setTimeout(()=>{
-      console.log(playRandomSound());
-    }, 100);
+    
     
 
 
@@ -68,17 +73,33 @@ observer.observe(target, config);
 
 
 //FUNCTIONS
-function buttonSound(){
+function buttonSound(model){
   
   $(".box").on("click", function(event){
     const colorButton = event.target.classList[1];
     // console.log(colorButton);
-    
+
+
     //play audio
     const soundPath = setting[colorButton];
     (new Audio(soundPath)).play();
 
+    //add pressed button style
     activeButtonEffect(event.target);
+
+
+    console.log("model: "+model);
+    console.log("answer: "+colorButton);
+    console.log(colorButton.localeCompare(model));
+
+    //check the match color
+    if(colorButton.localeCompare(model) == 0){
+      console.log("Match")
+    }
+    else{
+      console.log("No match")
+    }
+
   })
 }
 
