@@ -17,7 +17,7 @@ $("h1").on("click", function(){
     start = true;
 
     //active the color button
-    $(".box").removeClass("off");
+    // $(".box").removeClass("off");
   }
 });
 
@@ -45,7 +45,7 @@ let observer = new MutationObserver(function(mutation){
     //random sound
     setTimeout(()=>{
       console.log(playRandomSound());
-    }, 200);
+    }, 100);
     
 
 

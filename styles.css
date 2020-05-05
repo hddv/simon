@@ -58,9 +58,9 @@ a{
   background-color: blue;
 }
 
-.off{
+/* .off{
   filter: grayscale(60%);
-}
+} */
 
 .pressed{
   /* border: 5px solid #FEF2BF; */
