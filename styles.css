@@ -42,19 +42,19 @@ a{
   margin: 15px;
 }
 
-.green{
+#green{
   background-color: green;
 }
 
-.red{
+#red{
   background-color: red;
 }
 
-.yellow{
+#yellow{
   background-color: yellow;
 }
 
-.blue{
+#blue{
   background-color: blue;
 }
 
@@ -69,3 +69,13 @@ a{
   background-color: grey;
 }
 
+
+
+.right{
+  box-shadow: inset 0px 0px 0px 5px #FEF2BF;
+}
+
+
+.wrong{
+  box-shadow: inset 0px 0px 0px 5px red;
+}
