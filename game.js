@@ -2,7 +2,7 @@ let buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
 let userClickedPattern = [];
 
-nextSequence();
+//nextSequence();
 
 
 //Detect click of button
@@ -17,6 +17,12 @@ $(".box").on("click", function () {
   animatePress(userChosenColour);
 
 });
+
+
+//Detect click of H1
+
+//$("h1").on("click", )
+
 
 
 
