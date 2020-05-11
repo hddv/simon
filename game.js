@@ -40,9 +40,6 @@ if (!start) {
 
 
 
-
-
-
 ////////////////////////////
 //FUNCTIONS
 ///////////////////////////
@@ -111,12 +108,18 @@ function checkAnswer(currentLevel) {
     console.log("no match");
     animateWrong(userClickedPattern[currentLevel]);
 
-    //change h1 level to start
-    $("#game-title").hide();
-    $("#first-title").text("Game Over! Press here to replay").show();
-    level = 0;
-    gamePattern = [];
-    
+    startOver();
+
+
   }
 
+}
+
+
+function startOver() {
+  $("#game-title").hide();
+  $("#first-title").html("Game Over!<br><br>Level " +level+ "<br>Press here to Restart").show();
+  level = 0;
+  gamePattern = [];
+  start = false;
 }
