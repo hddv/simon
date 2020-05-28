@@ -1,3 +1,3 @@
 # simon
 
-Play this game => https://hdinhvu.github.io/simon/
+Play this game => https://hddv.github.io/simon/
